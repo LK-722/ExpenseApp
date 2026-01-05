@@ -47,14 +47,18 @@ export default function AddTransaction({ handleTransaction }) {
             <button
               type="button"
               onClick={() => setIsIcome(true)}
-              className="buttons amount-btn1"
+              className={`buttons amount-btn1 ${
+                isIcome ? "income-positive" : ""
+              } `}
             >
               Icome
             </button>
             <button
               type="button"
               onClick={() => setIsIcome(false)}
-              className="buttons amount-btn2"
+              className={`buttons amount-btn2 ${
+                isIcome ? "" : "income-negitive"
+              } `}
             >
               Expense
             </button>

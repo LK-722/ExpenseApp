@@ -24,11 +24,21 @@ export default function TransactionLists({ transactions }) {
   return (
     <div className="transaction-list body-parts">
       <div className="list-titles">
-        <h3 className="titles-form">Title</h3>
-        <h3 className="titles-form">Amount</h3>
-        <h3 className="titles-form">Category</h3>
-        <h3 className="titles-form">Date</h3>
-        <h3 className="titles-form">Transaction</h3>
+        <div className="titles-covers">
+          <h3 className="titles-form">Title</h3>
+        </div>
+        <div className="titles-covers">
+          <h3 className="titles-form">Amount</h3>
+        </div>
+        <div className="titles-covers">
+          <h3 className="titles-form">Category</h3>
+        </div>
+        <div className="titles-covers">
+          <h3 className="titles-form">Date</h3>
+        </div>
+        <div className="titles-covers">
+          <h3 className="titles-form">Transaction</h3>
+        </div>
 
         <select
           className="filter-list"
@@ -45,7 +55,7 @@ export default function TransactionLists({ transactions }) {
 
       <ul>
         {sortByList.map((item, i) => (
-          <li key={i}>
+          <li key={i} className="trans-list">
             <span>{item.title}</span>
             <span>{item.amount}</span>
             <span>{item.category}</span>

@@ -1,10 +1,13 @@
-/*/My Best Pick for You (expense tracker UI, clean and modern):
-
+/*/
 Buttons: Helvetica Bold, all caps, letter-spacing 1–2px
 
 Body text: Inter Regular (size 14–16px for readability)
 
 Headings: Helvetica Neue Medium or Bold */
+
+html {
+  font-size: 62.5%;
+}
 
 * {
   margin: 0;
@@ -15,6 +18,7 @@ Headings: Helvetica Neue Medium or Bold */
 body {
   font-family: "Inter Regular";
   background-color: #ffffff;
+  margin: 7rem 7rem 3rem 7rem;
 }
 
 #roott {
@@ -37,8 +41,9 @@ body {
 .totals-list {
   list-style: none;
 }
-
+/*//////////////////////*/
 /*add expense form css*/
+/*//////////////////////*/
 
 .transaction-form div {
   margin: 1rem;
@@ -47,7 +52,9 @@ body {
 .transaction-form {
   display: flex;
   flex-direction: column;
+  min-height: 100%;
   align-items: stretch;
+  font-size: 1.4rem;
 }
 
 .inputs-form {
@@ -55,7 +62,7 @@ body {
   padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 1.4rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -81,6 +88,15 @@ body {
 .buttons:hover {
   background-color: #74c0fc;
 }
+
+.income-positive {
+  background-color: #74c0fc;
+}
+
+.income-negitive {
+  background-color: #74c0fc;
+}
+
 .amount-btn1,
 .amount-btn2 {
   border-radius: 8px;
@@ -109,6 +125,132 @@ body {
 }
 
 .expense-btn {
+  padding: 1rem 1.2rem;
+  margin-top: auto;
+}
+
+/*//////////////////////*/
+/*totals css*/
+/*//////////////////////*/
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.totals-list,
+.category {
+  padding: 1.4rem;
+}
+
+.category {
+  background-color: #74c0fc;
+  align-self: normal;
+  display: flex;
+  justify-content: center;
+}
+
+.totals-list {
   flex: 1;
-  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.totals-list li {
+  border-bottom: 1px #ddd solid;
+}
+
+.chart-wrap {
+  width: 10rem;
+  height: 10rem;
+  margin: 0px auto 1.2rem;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.total::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.total.positive::before {
+  background-color: green;
+}
+
+.total.negative::before {
+  background-color: red;
+}
+
+.total-income {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.total-income::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #008000;
+}
+.total-expense {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.total-expense::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+
+/*//////////////////////*/
+/*list css*/
+/*//////////////////////*/
+
+.list-titles {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.5fr;
+  font-size: 1.4rem;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-list {
+  border: 0px;
+}
+
+.titles-covers h3 {
+  justify-self: center;
+}
+
+.titles-covers {
+  border-right: 1px #ddd solid;
+}
+
+.trans-list {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+}
+
+.trans-list span {
+  justify-self: center;
 }
