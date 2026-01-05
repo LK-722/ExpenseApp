@@ -10,7 +10,7 @@ export default function Totals({ transactions }) {
   const totalBalance = Math.abs(totalExpense - totalIncome);
 
   return (
-    <div className="totals">
+    <div className="totals body-parts">
       <ul className="totals-list">
         <li>
           <span>Total balance</span> <span>${totalBalance}</span>

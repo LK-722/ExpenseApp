@@ -5,7 +5,6 @@ import "./style.css";
 import AddTransaction from "./AddTransaction";
 import Totals from "./totals";
 import TransactionLists from "./TransactionLists";
-import Account from "./accounts";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -15,7 +14,7 @@ function App() {
   }
 
   return (
-    <div id="rood">
+    <div id="roott">
       {/* ///Add expense */}
       <AddTransaction handleTransaction={handleTransaction} />
 

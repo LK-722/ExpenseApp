@@ -22,7 +22,7 @@ export default function TransactionLists({ transactions }) {
       .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
-    <div className="transaction-list">
+    <div className="transaction-list body-parts">
       <div className="list-titles">
         <h3 className="titles-form">Title</h3>
         <h3 className="titles-form">Amount</h3>
