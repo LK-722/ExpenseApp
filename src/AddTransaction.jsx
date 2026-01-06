@@ -33,6 +33,7 @@ export default function AddTransaction({ handleTransaction }) {
     if (!title.trim() || !date || !category || !amount || amount <= 0) return;
 
     const newTransaction = {
+      id: crypto.randomUUID(),
       title: title,
       amount: Number(amount),
       date: date,

@@ -53,27 +53,39 @@ export default function TransactionLists({ transactions }) {
         </select>
       </div>
 
-      <ul>
-        {sortByList.map((item, i) => (
-          <li key={i} className="trans-list">
-            <div>
-              <span>{item.title}</span>
-            </div>
-            <div>
-              <span>{item.amount}</span>
-            </div>
-            <div>
-              <span>{item.category}</span>
-            </div>
-            <div>
-              <span>{item.date}</span>
-            </div>
-            <div>
-              <span>{item.type.toUpperCase()}</span>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className="list-section">
+        <ul>
+          {sortByList.map((item) => (
+            <li key={item.id} className="trans-list">
+              <div>
+                <span>{item.title}</span>
+              </div>
+              <div>
+                <span>{item.amount}</span>
+              </div>
+              <div>
+                <span>{item.category}</span>
+              </div>
+              <div className="dateTime">
+                {(() => {
+                  const [datePart, timePart = ""] = (item.date || "").split(
+                    "T"
+                  );
+                  return (
+                    <>
+                      <span>{datePart}</span>
+                      <span>{timePart.slice(0, 5)}</span>
+                    </>
+                  );
+                })()}
+              </div>
+              <div>
+                <span>{item.type.toUpperCase()}</span>
+              </div>
+            </li>
+          ))}
+        </ul>{" "}
+      </div>
     </div>
   );
 }
