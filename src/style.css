@@ -20,6 +20,15 @@ body {
   background-color: #ffffff;
 }
 
+.heading {
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Helvetica bold;
+  letter-spacing: 8px;
+  color: #343a40;
+}
+
 #roott {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -36,6 +45,16 @@ body {
 
 .totals-list {
   list-style: none;
+}
+
+.totals-list span {
+  color: #212529;
+  font-family: inherit;
+  font-weight: 1000;
+}
+
+.titles-form {
+  color: #212529;
 }
 /*//////////////////////*/
 /*add expense form css*/

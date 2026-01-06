@@ -14,18 +14,21 @@ function App() {
   }
 
   return (
-    <div id="roott">
-      {/* ///Add expense */}
-      <AddTransaction handleTransaction={handleTransaction} />
+    <>
+      <h1 className="heading">The Expense App</h1>
+      <div id="roott">
+        {/* ///Add expense */}
+        <AddTransaction handleTransaction={handleTransaction} />
 
-      {/* To add date and catogory */}
+        {/* To add date and catogory */}
 
-      {/* totals  */}
-      <Totals transactions={transactions} />
+        {/* totals  */}
+        <Totals transactions={transactions} />
 
-      {/* slips */}
-      <TransactionLists transactions={transactions} />
-    </div>
+        {/* slips */}
+        <TransactionLists transactions={transactions} />
+      </div>{" "}
+    </>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
