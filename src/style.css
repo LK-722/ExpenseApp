@@ -275,6 +275,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
+  border-bottom: 0.5px #ddd solid;
+}
+
+.trans-list:last-child {
+  border-bottom: none;
 }
 
 .list-section {
@@ -289,6 +294,7 @@ body {
 }
 
 .trans-list span {
+  font-size: 1.4rem;
   margin: 0 auto;
 }
 
@@ -300,4 +306,26 @@ body {
 .dateTime {
   display: flex;
   flex-direction: column;
+}
+
+.delete-btn {
+  font-size: 1.4rem;
+  font-family: inherit;
+}
+
+.delete-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: auto;
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #343a40;
+  border-radius: 200%;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #ff0000;
 }

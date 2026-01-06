@@ -21,6 +21,10 @@ function loadTransactions() {
 function App() {
   const [transactions, setTransactions] = useState(loadTransactions);
 
+  function handleDelete(id) {
+    setTransactions((txs) => txs.filter((t) => t.id !== id));
+  }
+
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(transactions));
@@ -46,7 +50,7 @@ function App() {
         <Totals transactions={transactions} />
 
         {/* slips */}
-        <TransactionLists transactions={transactions} />
+        <TransactionLists transactions={transactions} onDelete={handleDelete} />
       </div>{" "}
     </>
   );

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TransactionLists({ transactions }) {
+export default function TransactionLists({ transactions, onDelete }) {
   const [sortBy, setSortBy] = useState("sort");
   let sortByList;
   if (sortBy === "sort") sortByList = transactions;
@@ -82,6 +82,9 @@ export default function TransactionLists({ transactions }) {
               <div>
                 <span>{item.type.toUpperCase()}</span>
               </div>
+              <button className="delete-btn" onClick={() => onDelete(item.id)}>
+                &#10005;
+              </button>
             </li>
           ))}
         </ul>{" "}
