@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { useState } from "react";
 import "./style.css";
@@ -6,8 +6,28 @@ import AddTransaction from "./AddTransaction";
 import Totals from "./totals";
 import TransactionLists from "./TransactionLists";
 
+const STORAGE_KEY = "expenseapp:transactions";
+
+function loadTransactions() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : [];
+  } catch (err) {
+    console.warn("Failed to load saved transactions", err);
+    return [];
+  }
+}
+
 function App() {
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState(loadTransactions);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(transactions));
+    } catch (err) {
+      console.warn("Failed to save transactions", err);
+    }
+  }, [transactions]);
 
   function handleTransaction(newTransaction) {
     setTransactions((transactions) => [...transactions, newTransaction]);
