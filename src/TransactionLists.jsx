@@ -56,11 +56,21 @@ export default function TransactionLists({ transactions }) {
       <ul>
         {sortByList.map((item, i) => (
           <li key={i} className="trans-list">
-            <span>{item.title}</span>
-            <span>{item.amount}</span>
-            <span>{item.category}</span>
-            <span>{item.date}</span>
-            <span>{item.type.toUpperCase()}</span>
+            <div>
+              <span>{item.title}</span>
+            </div>
+            <div>
+              <span>{item.amount}</span>
+            </div>
+            <div>
+              <span>{item.category}</span>
+            </div>
+            <div>
+              <span>{item.date}</span>
+            </div>
+            <div>
+              <span>{item.type.toUpperCase()}</span>
+            </div>
           </li>
         ))}
       </ul>

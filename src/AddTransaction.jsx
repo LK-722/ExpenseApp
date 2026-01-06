@@ -6,6 +6,27 @@ export default function AddTransaction({ handleTransaction }) {
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
+  const [categoryListIncomme, setCategoryListIncome] = useState([
+    "Salary",
+    "Sale",
+    "Lottery",
+    "Refunds",
+    "Grants",
+    "Awards",
+  ]);
+  const [categoryListExpense, setCategoryListExpense] = useState([
+    "Travel",
+    "Groceries",
+    "Clothes",
+    "Bills",
+    "Entertainment",
+    "Electronics",
+    "Home",
+    "Health",
+    "Social",
+    "Transportation",
+    "Shopping",
+  ]);
 
   function handleForm(e) {
     e.preventDefault();
@@ -93,8 +114,14 @@ export default function AddTransaction({ handleTransaction }) {
               onChange={(e) => setCategory(e.target.value)}
             >
               <option>select Category</option>
-              <option>Travel</option>
-              <option>Groceries</option>
+              {(isIcome ? categoryListIncomme : categoryListExpense).map(
+                (category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                )
+              )}
+              <select>add category</select>
             </select>
           </div>
         </div>
