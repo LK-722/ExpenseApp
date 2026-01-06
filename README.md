@@ -1,4 +1,4 @@
-Expense Tracker App
+The Expense App
 
 A clean and simple expense-tracking web application built with React. It allows users to add income and expense transactions, view live balance updates, delete entries, and automatically save all data using Local Storage, so transactions remain even after refreshing the browser. The layout is fully responsive and works smoothly on both desktop and mobile devices.
 
