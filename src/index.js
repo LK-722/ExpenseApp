@@ -38,7 +38,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app-wrap">
       <div id="roott">
         <h1 className="heading">The Expense App</h1>
         {/* ///Add expense */}
@@ -52,7 +52,7 @@ function App() {
         {/* slips */}
         <TransactionLists transactions={transactions} onDelete={handleDelete} />
       </div>{" "}
-    </>
+    </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
