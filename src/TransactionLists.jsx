@@ -41,6 +41,7 @@ export default function TransactionLists({ transactions, onDelete }) {
         </div>
 
         <select
+          id="sortBy"
           className="filter-list"
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}

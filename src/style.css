@@ -304,6 +304,10 @@ body {
 .titles-covers {
   border-right: 1px #ddd solid;
   overflow: hidden;
+  /*from some browsers's compatability*/
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .trans-list {
