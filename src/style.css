@@ -21,17 +21,17 @@ body {
 }
 
 .heading {
-  margin-top: 2rem;
+  margin: 2rem auto;
   text-align: center;
   text-transform: uppercase;
   font-family: Helvetica bold;
   letter-spacing: 8px;
   color: #343a40;
+  grid-column: 1/3;
 }
 
 #roott {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   width: 70rem;
   margin: auto;
 }

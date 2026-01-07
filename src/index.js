@@ -39,8 +39,8 @@ function App() {
 
   return (
     <>
-      <h1 className="heading">The Expense App</h1>
       <div id="roott">
+        <h1 className="heading">The Expense App</h1>
         {/* ///Add expense */}
         <AddTransaction handleTransaction={handleTransaction} />
 
